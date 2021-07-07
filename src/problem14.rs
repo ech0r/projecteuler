@@ -7,7 +7,6 @@ pub fn problem14() {
         if values[n] > 1 {
             return values[n];
         }
-        let mut i = 0;
         let mut num = n; // num = n to start
         loop {
             if num ^ 1 == num + 1 {
@@ -20,7 +19,6 @@ pub fn problem14() {
             if num == 1 {
                 break;
             }
-            i += 1;
             //println!("num: {} values[n]: {}", num, values[n]);
         }
         return values[n];
@@ -30,7 +28,7 @@ pub fn problem14() {
     let mut answer = 0;
     let mut i = 500000;
     loop {
-        let mut count = count_collatz(i, &mut collatz_sequence_lengths);
+        let count = count_collatz(i, &mut collatz_sequence_lengths);
         if count > longest_chain {
             longest_chain = count;
             answer = i;
