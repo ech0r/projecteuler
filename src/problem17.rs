@@ -24,7 +24,7 @@ pub fn problem17() {
         num_lookup.insert(15, "fifteen".to_string());
         num_lookup.insert(16, "sixteen".to_string());
         num_lookup.insert(17, "seventeen".to_string());
-        num_lookup.insert(18, "eightteen".to_string());
+        num_lookup.insert(18, "eighteen".to_string());
         num_lookup.insert(19, "nineteen".to_string());
         num_lookup.insert(20, "twenty".to_string());
         num_lookup.insert(30, "thirty".to_string());
@@ -37,10 +37,10 @@ pub fn problem17() {
         num_lookup.insert(100, "hundred".to_string());
         num_lookup.insert(1000, "thousand".to_string());
 
-        let mut ones = num%10;
-        let mut tens = (num - num%10)%100;
-        let mut hundreds = ((num - num%100)/100)%10;
-        let mut thousands = ((num - num%1000)/1000)%10;
+        let ones = num%10;
+        let tens = (num - num%10)%100;
+        let hundreds = ((num - num%100)/100)%10;
+        let thousands = ((num - num%1000)/1000)%10;
         let mut number = String::from("");
         /*
         println!("Ones: {}", ones);
@@ -71,22 +71,22 @@ pub fn problem17() {
                 number.push_str(&num_lookup.get_mut(&ones).unwrap());
             }
         }
-        println!("{}", number);
+        //println!("Number: {}", number);
+        //println!("i: {}, number of letters: {}", num,number.len());
+        //println!("==============================");
         number.len() as i32
     }
     let mut i = 1;
     let mut sum = 0;
-    
     loop {
-        println!("{}", i);
         sum += count_letters_in_number(i);
         if i == 1000 {
             break;
         }
         i += 1;
     }
-    println!("{}", sum);
-    println!("{}", count_letters_in_number(115));
-    println!("{}", count_letters_in_number(342));
-    println!("{}", count_letters_in_number(1000));
+    println!("Problem 17: {}", sum);
+    //println!("115 {}", count_letters_in_number(115));
+    //println!("342 {}", count_letters_in_number(342));
+    //println!("1000 {}", count_letters_in_number(1000));
 }
