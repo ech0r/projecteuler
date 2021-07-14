@@ -16,6 +16,7 @@ mod problem15;
 mod problem16;          
 mod problem17;
 mod problem18;
+mod problem19;
 
 fn main() {
     println!("======= PROJECT EULER =======");
@@ -37,4 +38,5 @@ fn main() {
     problem16::problem16();
     problem17::problem17();
     problem18::problem18();
+    problem19::problem19();
 }
