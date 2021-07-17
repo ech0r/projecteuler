@@ -24,7 +24,6 @@ pub fn problem19() {
     let mut first_sunday = 6; // first sunday of 1901 was 6 days in
     let mut count = 0;
     for year in years {
-        let mut days = 365;
         if is_leap_year(year) {
             let mut first_of_month = vec![1, 32, 61, 92, 122, 153, 183, 214, 245, 275, 306, 336];
             first_of_month.retain(|&n| (n - first_sunday) % 7 == 0);
