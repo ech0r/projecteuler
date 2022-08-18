@@ -11,7 +11,7 @@ pub fn problem13() {
         return (n | 0x30) as char;
     }
     // Parse input numbers into a vector of strings
-    let numbers: Vec<String> = fs::read_to_string("./inputs/problem13.txt")
+    let numbers: Vec<String> = fs::read_to_string("./euler/inputs/problem13.txt")
         .expect("Failed to read input")
         .split("\n")
         .map(|s| s.to_string())         // Convert &str to String

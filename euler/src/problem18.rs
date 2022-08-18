@@ -10,7 +10,7 @@ fn max(x: i32, y: i32) -> i32 {
 
 pub fn problem18() {
     // Build data structure to hold triangle
-    let data: Vec<String> = fs::read_to_string("./inputs/problem18.txt")
+    let data: Vec<String> = fs::read_to_string("./euler/inputs/problem18.txt")
     .expect("Failed to read input")
     .split("\n")
     .map(|s| s.to_string())         // Convert &str to String
