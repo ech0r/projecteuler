@@ -21,7 +21,7 @@ impl BigInt {
         let mut sum: Vec<u8> = vec![];
         let mut carry = 0u8;
         loop {
-            let mut s = 0;
+            let s;
             match(num1.next(), num2.next()) {
                 (Some(x), Some(y)) => {
                     s = x + y + carry;
@@ -56,7 +56,7 @@ impl BigInt {
 
     fn multiply(&self, other: u32) -> Self {
         let mut current_product: Self = BigInt::new(0);
-        for x in 0..other {
+        for _x in 0..other {
             current_product = current_product.add(self);
         }
         current_product
@@ -73,12 +73,6 @@ impl BigInt {
     fn sum_digits(&self) -> u32 {
         let sum: u32 = self.value.iter().map(|n| *n as u32).sum();
         sum
-    }
-
-    fn print_value(&self) {
-        let char_vec: Vec<char> = self.value.iter().map(|n| char::from_digit(*n as u32, 10).unwrap()).collect();
-        let value: String = char_vec.into_iter().collect();
-        println!("{}", value);
     }
 }
 

@@ -18,6 +18,8 @@ pub mod problem17;
 pub mod problem18;
 pub mod problem19;
 pub mod problem20;
+pub mod problem21;
+pub mod problem22;
 
 pub use problem1::problem1;
 pub use problem2::problem2;
@@ -39,6 +41,8 @@ pub use problem17::problem17;
 pub use problem18::problem18;
 pub use problem19::problem19;
 pub use problem20::problem20;
+pub use problem21::problem21;
+pub use problem22::problem22;
 
 #[cfg(test)]
 mod tests {
