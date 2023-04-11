@@ -24,4 +24,5 @@ fn main() {
     problem20();
     problem21();
     problem22();
+    problem23();
 }
