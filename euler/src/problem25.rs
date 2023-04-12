@@ -49,7 +49,5 @@ pub fn problem25() {
     
     let digits = 1000;
     let index = fibonacci_index(digits);
-    let num1 = [9,9,9];
-    let num2 = [0,0,1];
     println!("Problem 25: {:?}", index) ;
 }
